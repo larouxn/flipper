@@ -1,11 +1,6 @@
 require 'flipper/adapters/instrumented'
 require 'flipper/instrumentation/statsd'
-
-begin
-  require 'active_support/isolated_execution_state'
-rescue LoadError
-  # ActiveSupport::IsolatedExecutionState is only available in Rails 5.2+
-end
+require 'active_support/isolated_execution_state'
 
 RSpec.describe Flipper::Instrumentation::StatsdSubscriber do
   let(:statsd_client) { Statsd.new }

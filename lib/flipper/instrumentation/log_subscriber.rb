@@ -77,8 +77,7 @@ module Flipper
       end
 
       def self.detach
-        # Rails 5.2 doesn't support this, that's fine
-        detach_from InstrumentationNamespace if respond_to?(:detach_from)
+        detach_from InstrumentationNamespace
       end
 
       private
