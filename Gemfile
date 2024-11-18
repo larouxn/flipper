@@ -39,7 +39,8 @@ gem 'flamegraph'
 gem 'mysql2'
 gem 'pg'
 gem 'cuprite', '0.15.0'
-gem 'puma'
+# Temporary SHA pin until Puma release > 6.4.3
+gem 'puma', github: 'puma/puma', ref: '366b6b5'
 gem 'ferrum', '0.14.0' # until we can upgrae to whatever is after 0.15.0 as that doesn't support 2.7
 
 group(:guard) do
